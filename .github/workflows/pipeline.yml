@@ -26,7 +26,7 @@ jobs:
           poetry config virtualenvs.in-project true
       - name: Install venv
         run: |
-          poetry env use python3
+          poetry env use python3.11.0
           poetry install
           poetry update
       - name: Lint
