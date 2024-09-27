@@ -1,5 +1,6 @@
 """ FastAPI Boilerplate Library """
 import logging
+
 import uvicorn
 from fastapi import FastAPI
 
@@ -9,7 +10,7 @@ app = FastAPI()
 
 
 @app.get('/hello')
-async def hello():
+async def hello() -> dict:
     """ hello world """
     return {'message': 'Hello World'}
 
