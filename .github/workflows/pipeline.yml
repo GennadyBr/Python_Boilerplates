@@ -2,11 +2,9 @@ name: Code check PEP8 naming conventions, plugin for flake8
 
 on:
   push:
-    branches:
-      - main, dev, master
+    branches: [ main, dev, master ]
   pull_request:
-    branches:
-      - main, dev, master
+    branches: [ main, dev, master ]
 
 jobs:
   build:
