@@ -1,3 +1,3 @@
-# FastAPI_Boilerplate
-FastAPI_Boilerplate Library
-new
+# Python_Boilerplate
+Python_Boilerplate Library
+
