@@ -9,6 +9,7 @@ def _mk_log_dir(folder: str) -> None:
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(cur_dir)
-log_filename = f'{cur_dir}/log_conf.yaml'
+log_config_filename = f'{cur_dir}/log_conf.yaml'
+
 _mk_log_dir(f'{parent_dir}/logs')
-_mk_log_dir(f'{os.path.dirname(parent_dir)}/tests/logs')
+log_rotation_filename = f'{parent_dir}/logs/logs.log'
