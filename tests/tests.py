@@ -1,6 +1,4 @@
 """ Test """
-import os
-import sys
 import pytest
 from httpx import ASGITransport, AsyncClient
 

@@ -14,7 +14,7 @@ class ColoredFormatter(logging.Formatter):
     }
     RESET = '\033[0m'
 
-    def format(self, record):
+    def format(self, record: logging.LogRecord) -> str:
         """Add color to log levels"""
         log_level = record.levelname
         if log_level in self.COLORS:

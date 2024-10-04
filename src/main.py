@@ -1,16 +1,21 @@
 """ FastAPI Boilerplate Library """
+from typing import Callable
+
 import requests
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.responses import Response
 
 from src.core.logger import logger
-from starlette.middleware.base import BaseHTTPMiddleware
 
 
 class LoggingMiddleware(BaseHTTPMiddleware):
     """Logging middleware"""
 
-    async def dispatch(self, request, call_next):
+    async def dispatch(
+        self, request: Request, call_next: Callable,
+    ) -> Response:
         logger.info('Logging middleware')
         logger.info(f'Request: {request.method} {request.url}')
         response = await call_next(request)
@@ -40,14 +45,13 @@ def _request() -> str:
 
 def _raise_error() -> str:
     """Raise Error"""
-    e: Exception = Exception('This is an exception message')
     try:
-        a = 1 / 0
-    except Exception as e:
-        logger.error(e)
+        div_zero = 1 / 0
+    except ZeroDivisionError as error:
+        logger.error(error)
         logger.exception('RRRR - Divide by zero error')
-        return str(e)
-    return str(a)
+        return str(error)
+    return str(div_zero)
 
 
 @app.get('/hello')
@@ -69,9 +73,6 @@ async def raise_error() -> str:
 
 
 if __name__ == '__main__':
-
-    # Test the color handler
-    logger.info("API is starting up")
 
     _hello()
     _request()
