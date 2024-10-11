@@ -19,8 +19,6 @@ app.add_middleware(LoggingMiddleware)
 app.include_router(router)
 
 
-
-
 if __name__ == '__main__':
 
     uvicorn.run(

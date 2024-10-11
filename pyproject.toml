@@ -44,8 +44,6 @@ flake8-string-format = "^0.3.0"
 flake8-variables-names = "^0.0.5"
 pep8-naming = "^0.14.1"
 flake8-pyproject = "^1.2.3"
-pre-commit = "^4.0.1"
-
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.3"
