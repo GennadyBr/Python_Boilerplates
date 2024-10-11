@@ -68,6 +68,7 @@ exclude = [
 max-line-length = 79
 max-complexity = 10
 ignore = "A003, E402"
+path = ["src", "tests"]
 
 [tool.black]
 line-length = 79
