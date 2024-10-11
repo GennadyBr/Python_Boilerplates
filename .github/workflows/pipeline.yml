@@ -1,4 +1,4 @@
-name: Code check PEP8 naming conventions, plugin for flake8
+name: Python Boilerplate
 
 on:
   push:
