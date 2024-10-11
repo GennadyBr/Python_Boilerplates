@@ -63,8 +63,7 @@ exclude = [
     ".idea",
     ".ipynb_checkpoints",
     ".github",
-    "src/migrations/",
-]
+    "src/migrations/"]
 max-line-length = 79
 max-complexity = 10
 ignore = "A003, E402"
@@ -84,8 +83,7 @@ exclude = [
     ".idea",
     ".ipynb_checkpoints",
     ".github",
-    "src/migrations/",
-]
+    "src/migrations/"]
 
 [tool.mypy]
 python_version = "3.11"
@@ -103,12 +101,10 @@ exclude = [
     ".idea",
     ".ipynb_checkpoints",
     ".github",
-    "src/migrations/",
-]
+    "src/migrations/"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "package"
 pythonpath = [
-  ".", "src", "tests", "src/core",
-]
+  ".", "src", "tests", "src/core"]
