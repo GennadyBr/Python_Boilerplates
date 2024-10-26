@@ -1,10 +1,7 @@
 name: Python Boilerplate
 
 on:
-  push:
-    branches: [ main, dev, master ]
-  pull_request:
-    branches: [ main, dev, master ]
+  workflow_dispatch:
 
 jobs:
   build:

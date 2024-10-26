@@ -10,4 +10,3 @@ if not os.path.exists(f'{project_dir}/logs'):
     os.makedirs(f'{project_dir}/logs')
 
 log_rotation_filename = f'{project_dir}/logs/logs.log'
-
