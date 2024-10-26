@@ -8,8 +8,10 @@ from fastapi import FastAPI
 # Add the root directory of your project to the Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.api.routers import router
+from src.api.v1.routers import router
+from src.core.config import file_settings
 from src.middleware import LoggingMiddleware
+
 
 app = FastAPI(
     debug=False,
@@ -25,6 +27,6 @@ if __name__ == '__main__':
         app='main:app',
         host='0.0.0.0',
         port=8000,
-        log_config='core/log_conf.yaml',
+        log_config=file_settings.log_config_filename,
         reload=True,
     )
