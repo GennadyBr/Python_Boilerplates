@@ -12,11 +12,10 @@ class FileSettings(BaseSettings):
     project_dir: str = os.path.dirname(parent_dir)
 
     log_config_filename: str = f'{cur_dir}/log_conf.yaml'
-
-    if not os.path.exists(f'{project_dir}/logs'):
-        os.makedirs(f'{project_dir}/logs')
-
     log_rotation_filename: str = f'{project_dir}/logs/logs.log'
 
 
 file_settings = FileSettings()
+
+if not os.path.exists(f'{file_settings.project_dir}/logs'):
+    os.makedirs(f'{file_settings.project_dir}/logs')

@@ -12,7 +12,6 @@ from src.api.v1.routers import router
 from src.core.config import file_settings
 from src.middleware import LoggingMiddleware
 
-
 app = FastAPI(
     debug=False,
 )
